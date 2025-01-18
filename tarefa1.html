@@ -9,39 +9,51 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <div>
-                    <button onclick="home()">
-                        <li>Home</li>
-                    </button>
-                </div>
-                <div>
-                    <button onclick="video()">
-                        <li>Video do jogo</li>
-                    </button>
-                </div>
-                <div onclick="steam()">
-                    <button>
-                        <li>link do jogo na Steam</li>
-                    </button>
-                </div>               
-            </ul>
+            <div>
+                <img src="arquivos/lethal-company-fortifies-its-pos-ee7bca80-image-ee7bca63.jpg.webp" alt="">
+            </div>
+            <div>
+                <button class="btn-1" id="scroll-button"">
+                    <p class="p-header">Video do jogo</p>
+                </button>
+            </div>
+            <div>
+                <button onclick="game()">
+                    <p class="p-header">link do jogo na Steam</p>
+                </button>
+            </div>               
         </nav>
     </header>
 
+    <hr>
+
     <h1>Lethal Company</h1>
+    <br><br>
+    <p>Lethal Company é um jogo eletrônico em produção de terror de sobrevivência cooperativo lançado com acesso antecipado em 23 de outubro de 2023 no Steam para Microsoft Windows.
+     Desenvolvido e publicado por Zeekerss, o jogo coloca os jogadores em situações assustadoras enquanto exploram ambientes misteriosos e sinistros.
+    </p>
 
 
-    <!--
-    <div class="video">
-        <video src="arquivos/lethal.mp4" controls></video>
-    </div>
-    -->
+    
+<div id="scroll">
+    <video src="arquivos/lethal.mp4" controls id="videolethal" ></video>
+</div>
 
+<footer>
+    Todos os direitos reservados a ©Copyright
+</footer>
 
-        <footer>
-            Todos os direitos reservados a ©Copyright
-    </footer>
-    <script src="main.js"></script>
+<script>
+    document.getElementById("scroll-button").addEventListener("click", scrollToVideo);
+    
+    function scrollToVideo() {
+        const videoElement = document.getElementById("videolethal");
+        videoElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function game() {
+        window.location.href = "https://store.steampowered.com/app/1966720/Lethal_Company/";
+    }
+</script>
 </body>
 </html>
