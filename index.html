@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Lethal Company</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="arquivos/lethal-company-fortifies-its-pos-ee7bca80-image-ee7bca63.jpg.webp" alt="Logo do jogo">
+            </div>
+            <div class="nav-buttons">
+                <button class="btn-1" id="scroll-button">
+                    <p class="p-header">Vídeo do Jogo</p>
+                </button>
+
+                <button class="btn-1" id="scroll-button2">
+                    <p class="p-header">Recepcão</p>
+                </button>
+
+                <button onclick="game()">
+                    <p class="p-header">Link do Jogo na Steam</p>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <hr class="divider">
+
+    <main>
+        <h1>Lethal Company</h1>
+        <p>
+            Lethal Company é um jogo eletrônico de terror de sobrevivência cooperativo lançado em 23 de outubro de 2023 no Steam para Microsoft Windows.
+            Desenvolvido e publicado por Zeekerss, o jogo coloca os jogadores em situações assustadoras enquanto exploram ambientes misteriosos e sinistros.
+        </p>    
+        
+        <div class="img-lethal">
+            <img src="arquivos/lethal-company-fortifies-its-pos-ee7bca80-image-ee7bca63.jpg.webp" alt="Logo do Jogo">
+        </div>
+        
+        <div class="recepcao">
+        <h2 class="h2" id="recepcao">Recepção</h2>
+
+        <p>Lethal Company conquistou enorme sucesso desde seu lançamento. Vendendo uma estimativa de entre 10 e 20 milhões de cópias e é um dos jogos mais vendidos do Steam. Além de conseguir um pico de 240.817 jogadores simultâneos e 20.260 jogadores diários.
+
+        </p>
+        <p>
+            O jogo também foi muito bem avaliado pelos jogadores, com 97,31% críticas positivas no Steam.
+        </p>
+        </div>
+
+        <div id="imgjogo">
+            <img src="arquivos/ss_568d97dfa9d8d3128157d84c9437030ccc1011b0.1920x1080.jpg" alt="Imagen do Jogo" id="jogoimg" >
+        </div>
+
+        <br><br><br><br><br><hr>
+        
+
+        
+        <div id="scroll" class="video-container">
+            <video src="arquivos/lethal.mp4" controls id="videolethal"></video>
+        </div>
+        <p class="video-credits">
+            Vídeo retirado de <a href="https://video.fastly.steamstatic.com/store_trailers/256961309/movie480_vp9.webm?t=1690909590" target="_blank">Steam</a>.
+        </p>
+
+
+    </main>
+
+    <footer>
+        <p>© Todos os direitos reservados a Lethal Company</p>
+        <p>Parte do texto retirado da <a href="https://pt.wikipedia.org/wiki/Lethal_Company" target="_blank">Wikipédia</a>, disponível sob a <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">licença CC BY-SA 3.0</a>.</p>
+    </footer>
+    
+
+    <script>
+        
+        document.getElementById("scroll-button").addEventListener("click", scrollToVideo);
+        document.getElementById("scroll-button2").addEventListener("click", scrollToRecepcao);
+
+        function scrollToVideo() {
+            const videoElement = document.getElementById("videolethal");
+            videoElement.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+
+        function scrollToRecepcao() {
+            const recepcaoElement = document.getElementById("recepcao");
+            recepcaoElement.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+        
+        function game() {
+            window.location.href = "https://store.steampowered.com/app/1966720/Lethal_Company/";
+        }
+    </script>
+</body>
+</html>
